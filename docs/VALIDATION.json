@@ -1,0 +1,30 @@
+{
+  "date": "2026-10-22",
+  "models": 8,
+  "filaments_used": [
+    1,
+    2,
+    4
+  ],
+  "rounding_radius_mm": 1.2,
+  "all_meshes_watertight": true,
+  "max_pairwise_overlap_mm3": 5.186961971048731e-13,
+  "max_curved_surface_edge_distance_mm": 1.2000000002236373,
+  "catalog_sha256": "ac003fc02a7947dcc6e08ddcfb8beb9c85892c56779e072397b1957aec35c3df",
+  "apk_sha256": "56685ef6a8986e8e9e0423b92ed5f20b583e0281bbe3c841510f942c83980d70",
+  "apk_installed_version": "1.4.1-dice (8)",
+  "recognizer_software_tests_passed": true,
+  "analysis_synthetic_tests_passed": true,
+  "physical_dice_detection_validated": false,
+  "reference_plate_bambu_slice": {
+    "estimated_seconds": 124800,
+    "filament_changes": 572,
+    "models_g": 94.25,
+    "supports_g": 5.07,
+    "purged_g": 312.42,
+    "tower_g": 40.72,
+    "total_g": 452.46,
+    "printed": false
+  },
+  "phone_previous_baseline": "aborted when leaving activity; not a completed calibration"
+}

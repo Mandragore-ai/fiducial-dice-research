@@ -1,0 +1,122 @@
+MANDRAGORE — DÉS ITSY ARRONDIS V18 — 22 OCTOBRE 2026
+
+À ouvrir dans Bambu Studio : 01_REFERENCE_VERIFIEE_BAMBU.3mf.
+Le plateau de référence regroupe D6 40, D8 40, D12 54 et D20 72 mm.
+Le plateau ETAPE_2 contient D6 34, D8 34, D12 46 et D20 62 mm.
+Chaque dé existe aussi seul dans individuels/. Commencer par le D6 permet
+de vérifier l'impression et la capture avant de fabriquer les grands dés.
+Les dimensions annoncées sont les diamètres maximaux nominaux entre sommets,
+PAS la largeur d'une face ni, pour le D6, la longueur d'une arête. Le D6 40
+a une arête théorique de 23,09 mm. Les arrondis réduisent un peu l'encombrement.
+Les dimensions réelles et les tailles de chaque motif sont dans catalogue.csv.
+
+CONCEPTION
+Un seul objet imprimé, trois volumes affectés aux filaments :
+1 = Bambu TPU for AMS : arêtes, sommets et ancrages mécaniques internes.
+2 = PLA normal : corps isolant, 20 % de remplissage.
+3 = bobine vide : aucune pièce ni support affecté à ce filament.
+4 = PLA conducteur Protoplasta : fiducials ITSY et réseau interne, 100 %.
+Arêtes ET sommets arrondis au rayon 1,2 mm. Approximation maillée < 0,006 mm.
+Les faces restent planes. Les motifs conducteurs affleurent les faces ;
+aucun bourrelet TPU ne doit éloigner le fiducial de l'écran.
+Toutes les faces conductrices sont reliées par des pistes internes de 1,4 mm
+de diamètre à un noyau conducteur de 4 mm. Un doigt sur un motif d'une face
+accessible fournit le contact utilisateur. Le TPU est isolant.
+Les chiffres sont gravés. Deux faces opposées ont une somme égale à N+1.
+Le banc reçoit la valeur DU DESSUS ; le codebook donne la face posée dessous.
+ITSY uniquement : aucun pad PUC, électronique ou caméra.
+D6 : 6 formes ; D8 : 8 formes ; D12 : 6 formes en deux tailles ; D20 :
+10 formes en deux tailles. Les plus petits motifs peuvent être indiscernables
+sur le capteur : c'est un point à mesurer, pas un résultat acquis.
+Le suffixe A identifie ce modèle dans le catalogue. Deux impressions identiques
+ne deviennent pas deux exemplaires reconnaissables individuellement.
+
+IMPRESSION
+Référence : X1 Carbon, buse 0,4, plateau PEI texturé, couches 0,20 mm,
+3 parois, 5 couches pleines dessus/dessous, PLA 20 % gyroid.
+Conducteur : 100 %, 18 mm/s. TPU : 100 %, 30 mm/s.
+Supports PLA n°2 depuis le plateau, bordure 3 mm. Profils de filaments repris
+de l'état validé par l'utilisateur ; vérifier l'affectation AMS avant envoi.
+Purges entre matériaux et tour actives. Pas de purge dans les pièces, le
+remplissage ou les supports : éviter la contamination de l'isolant par le
+conducteur. Les nouveaux couples TPU/conducteur restent à qualifier en vrai.
+Des ancrages mécaniques retiennent le TPU ; l'adhésion réelle PLA/TPU, la
+continuité électrique et l'état de surface doivent être vérifiés après impression.
+Retirer supports, bordures et bavures avant de poser le dé sur le téléphone.
+Poser doucement ; ne pas lancer le dé sur l'écran.
+
+Tranchage Bambu du plateau de référence V18 : 34 h 40 estimées, 572 changements
+de filament, 452,46 g au total dont 94,25 g de modèles, 5,07 g de supports,
+312,42 g de purge et 40,72 g de tour. Il dépasse une nuit. Les échanges de
+matériaux expliquent l'essentiel du coût ; augmenter la vitesse du PLA ne
+supprime pas ces échanges. Aucune impression n'a été lancée.
+Le précédent tranchage à 0,16 mm estimait 45 h 55 ; ce n'est plus le profil livré.
+Le plateau réduit et les fichiers individuels doivent être retranchés après
+choix du fichier : ne pas leur attribuer le temps du plateau de référence.
+
+BANC DE TEST — NEXUS LAB 1.4.1
+La mise à jour conserve les anciens modes et les fichiers de mesures.
+Ouvrir « Dés ITSY — apprendre / test aveugle ».
+Un seul dé à la fois dans ce mode. Les sélections ne donnent jamais la réponse
+à la prédiction aveugle. Un catalogue nouveau ne réutilise pas silencieusement
+les apprentissages d'une ancienne géométrie.
+
+1. Écran vide : appuyer sur Calibrer, retirer mains et objets, rester sur
+   l'écran jusqu'au message de référence enregistrée. Il y a 5 s d'attente
+   puis 3 s de mesure. Quitter le mode interrompt la capture.
+2. Choisir le grand modèle et la valeur DU DESSUS. Garder « Tenu — contact
+   conducteur ». Poser un doigt sur un motif conducteur d'une autre face,
+   sans toucher directement la vitre autour du dé.
+3. Appuyer sur Apprendre puis placer le dé pendant les 5 s d'attente.
+   Garder pose et doigt immobiles pendant les 3 s de mesure.
+4. Retirer complètement le dé. Recommencer au moins 3 poses indépendantes
+   par résultat, en changeant position et angle. Apprendre toutes les faces
+   du dé avant d'évaluer ce dé ; le compteur indique les faces manquantes.
+5. Pour une vraie vérification séparée, revenir au menu, rouvrir le mode,
+   recalibrer puis utiliser Tester à l'aveugle. Ne plus apprendre durant cette
+   session d'évaluation. Choisir les valeurs et positions dans un ordre varié.
+6. La prédiction est enregistrée avant la déclaration de la réalité.
+   Renseigner ensuite le dé et la valeur vraiment visibles au-dessus, même
+   si la prédiction est fausse. « Inconnu / écran vide » sert aux témoins.
+7. Exporter toutes les mesures des dés : le ZIP contient les trames brutes,
+   apprentissages, prédictions figées, vérités déclarées et catalogue.
+   Transmettre ce ZIP pour analyser les échecs et préparer une amélioration.
+
+APPRENTISSAGE ET RÉDUCTION
+Commencer par la grande référence puis tester sa version réduite dans les
+mêmes conditions (main, état USB/charge, surface propre, positions comparables).
+La « grande référence » est un choix de conception, pas un optimum démontré.
+Comparer d'abord 3 poses apprises par face, puis 6, puis 12. Exporter après
+chaque palier et réserver de NOUVELLES poses aux tests. Garder des sessions
+complètes hors apprentissage. Ne pas évaluer sur les poses qui ont entraîné.
+Pour comparer simultanément les modèles, apprendre toutes leurs faces :
+le test choisit alors parmi ces classes et peut révéler leurs confusions.
+Le logiciel aligne les signatures mesurées, compare les rotations et rejette
+les signaux insuffisants, hors bord, trop étendus ou ambigus. Les seuils actuels
+sont expérimentaux ; un score de similarité n'est pas une probabilité.
+L'apprentissage peut améliorer une signature réellement mesurable. Il ne
+reconstitue pas les détails que le capteur n'enregistre pas. Il faudra alors
+modifier taille, formes ou codebook plutôt que prétendre avoir reconnu le dé.
+Le mode relâché sans main est un témoin distinct, sans garantie de détection.
+
+ANALYSE DES EXPORTS
+Avec Python : python analyse/analyze_dice.py export_des.zip nouveau_dossier
+Produit un bilan JSON et des CSV séparés par modèle et condition : type, modèle,
+résultat, erreurs, indéterminés, faux positifs sur inconnus, matrice de confusion,
+nombre de poses apprises et intervalles de confiance. Un bilan existant n'est
+pas écrasé. Les indéterminés sur un dé connu comptent comme échecs de reconnaissance.
+Ne pas annoncer un taux général à partir de quelques faces ou quelques poses.
+
+VALIDATION ACTUELLE
+Validé : huit géométries fermées, séparation des volumes, réseau conducteur
+connexe en CAO, arrondis dans le TPU, motifs au plan de contact, affectations
+1/2/4, tranchage du plateau de référence, compilation/installation Android et
+tests logiciels du moteur et de l'analyse des exports.
+Non établi : qualité d'impression, résistance électrique réelle, détection
+physique des dés, distinction entre tous les modèles, précision des résultats
+et équilibre au lancer. Les essais synthétiques ne prouvent pas ces propriétés.
+
+Source de la famille ITSY : https://github.com/Telecooperation/itsy-bits
+Les empreintes utilisées viennent des modèles ITSY fournis dans l'archive V8.
+L'apprentissage de Nexus Lab est ici un comparateur de signatures mesurées ;
+ce n'est pas un réseau neuronal préentraîné repris des auteurs d'ITSY.

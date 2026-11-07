@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 220" role="img" aria-label="Dés à fiducials capacitifs">
+<rect width="800" height="220" rx="26" fill="#15252f"/>
+<rect x="26" y="26" width="204" height="168" rx="24" fill="#d68028"/>
+<path d="M94 101l34-36 34 36-34 36z" fill="none" stroke="white" stroke-width="10"/><circle cx="128" cy="101" r="12" fill="white"/>
+<text x="260" y="102" fill="white" font-family="Arial,sans-serif" font-weight="700" font-size="44">Dés à fiducials capacitifs</text>
+<text x="261" y="152" fill="#a6c6ce" font-family="Arial,sans-serif" font-size="28">Mandragore.ai · D6 · D8 · D12 · D20</text>
+</svg>

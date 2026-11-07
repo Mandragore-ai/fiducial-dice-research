@@ -1,0 +1,7 @@
+cff-version: 1.2.0
+message: "If you use this research, please cite it."
+title: "Dés à fiducials capacitifs — Mandragore.ai"
+authors:
+  - name: "Mandragore.ai / 500 Nuances de Geek"
+url: "https://github.com/Mandragore-ai/fiducial-dice-research"
+license: "CC-BY-NC-4.0"
